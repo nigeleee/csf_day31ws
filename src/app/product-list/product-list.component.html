@@ -1,0 +1,25 @@
+<p [style.font-weight] = "fontWeight" [style.font-size] = "fontSize">Please Select</p>
+<div class="container">
+  <div class="row">
+    <table class="table table-primary">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of products; let i = index">
+          <td>
+            <img src="{{p.image}}" height="150px" width="auto">
+            {{p.name}}
+          </td>
+          <td>
+          <!-- <button class = "btn btn-primary" (click) = "testButton()">Add</button> -->
+          <button class="btn btn-primary" (click)="productSelected(p.name)">Add</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

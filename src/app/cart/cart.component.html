@@ -1,0 +1,24 @@
+<h2>My Cart</h2>
+<br><br>
+<div class="container">
+  <div class="row">
+    <table class="table table-primary">
+      <thead>
+        <tr>
+          <td>Item</td>
+          <td>Quantity</td>
+          <td>Action</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let p of products">
+          <td>{{p.name}}</td>
+          <td>{{p.quantity}}</td>
+          <td>
+            <button class="btn btn-primary" (click)="deleteItem(p.name)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
