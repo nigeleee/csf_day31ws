@@ -1,5 +1,15 @@
-<app-product-list (addItem)="itemChanged($event)"></app-product-list>
+<div class="container">
+  <div class="row">
+    <div class="col col-xs-5">
+      <app-product-list (addItem)="itemChanged($event)"></app-product-list>
+    </div>
+    <div class="col col-xs-5">
+      <app-cart [products]="receivedItems"></app-cart>
+    </div>
+  </div>
+</div>
 
-<app-cart [products]="receivedItems"></app-cart>
+
+
 
 

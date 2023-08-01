@@ -23,7 +23,7 @@ export class AppComponent {
     } else {
       let obj = this.receivedItems.find(o => o.name === event);
       let foundIndex = this.receivedItems.indexOf(obj, 0);
-      
+
       if (foundIndex >= 0) {
         this.receivedItems[foundIndex].quantity++;
       } else {
